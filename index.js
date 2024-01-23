@@ -2,6 +2,8 @@
 const inquirer = require('inquirer');
 const fs = require('fs');
 
+const {Circle, Triangle, Square} = require('./lib/shapes');
+
 // an array of questions for user input
 const questions = [
     {
@@ -9,7 +11,7 @@ const questions = [
         name:'title',
         message: 'Enter three (3) letters for your logo: ',
         validate: (input) =>{ //checks if you entered a title
-            if(!input.trim()){
+            if(!input.trim() || input.length > 3){
                 return 'Please enter the 3 letters you would like to use.';
             }
             return true;
