@@ -2,7 +2,10 @@
 const inquirer = require('inquirer');
 const fs = require('fs');
 
-const {Circle, Triangle, Square} = require('./lib/shapes');
+//importing the shapes needed 
+const Circle = require('./lib/circle');
+const Triangle= require('./lib/triangle');
+const square = require('./lib/square');
 
 // an array of questions for user input
 const questions = [
@@ -32,12 +35,8 @@ const questions = [
         type:'list',
         name:'shape',
         message: 'Enter the shape you want your logo to possess: ',
-        validate: (input) =>{ //checks if you entered a description
-            if(!input.trim()){
-                return 'Please enter the shape you would like to use.';
-            }
-            return true;
-        }
+        options: ['Circle', 'Triangle', 'Square'],
+       
     },
     {
         type:'input',
