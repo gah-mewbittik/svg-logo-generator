@@ -70,8 +70,8 @@ function svgType(data){
 function writeToFile(fileName, data) {
         
         //fileName = `${data.title.toLowerCase().split(' ').join('')}.md`;
-        const svgCode = svgType(data);
-
+        const shape = svgType(data);
+        const svgCode = shape.render();
         fs.writeFile(fileName, svgCode, (err) => {
         err ? console.log(err) : console.log('Generated logo.svg')
         });
