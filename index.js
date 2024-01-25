@@ -5,7 +5,7 @@ const fs = require('fs');
 //importing the shapes needed 
 const Circle = require('./lib/circle');
 const Triangle = require('./lib/triangle');
-const square = require('./lib/square');
+const Square = require('./lib/square');
 
 // an array of questions for user input
 const questions = [
