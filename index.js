@@ -53,19 +53,24 @@ const questions = [
 ];
 
 function svgType(data){
+
     const shapeColor = data['shape-color'];
+    const title = data['title'];
+    const textColor = data['text-color'];
 
     if(data.shape === 'Circle'){
-        const newCircle = new Circle(shapeColor);
+        const newCircle = new Circle(shapeColor, title, textColor);
         return newCircle;
     }else if(data.shape === 'Triangle'){
-        const newTriangle = new Triangle(shapeColor);
+        const newTriangle = new Triangle(shapeColor, title, textColor);
         return newTriangle;
     }else if(data.shape === 'Square'){
-        const newSquare = new Square(shapeColor);
+        const newSquare = new Square(shapeColor, title, textColor);
         return newSquare;
     }
 }
+
+
 
 
 // function to write README file
