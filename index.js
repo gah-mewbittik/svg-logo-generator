@@ -4,7 +4,7 @@ const fs = require('fs');
 
 //importing the shapes needed 
 const Circle = require('./lib/circle');
-const Triangle= require('./lib/triangle');
+const Triangle = require('./lib/triangle');
 const square = require('./lib/square');
 
 // an array of questions for user input
@@ -52,6 +52,8 @@ const questions = [
    
 ];
 
+
+
 // function to write README file
 function writeToFile(fileName, data) {
         
@@ -68,7 +70,7 @@ function init() {
     inquirer.prompt(questions)
     .then((data) => {
     
-        writeToFile('README.md', data);
+        writeToFile('logo.svg', data);
     })
     .catch((error) => {
         console.error(error.message);
