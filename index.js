@@ -53,14 +53,16 @@ const questions = [
 ];
 
 function svgType(data){
+    const shapeColor = data['shape-color'];
+
     if(data.shape === 'Circle'){
-        const newCircle = new Circle();
+        const newCircle = new Circle(shapeColor);
         return newCircle;
     }else if(data.shape === 'Triangle'){
-        const newTriangle = new Triangle();
+        const newTriangle = new Triangle(shapeColor);
         return newTriangle;
     }else if(data.shape === 'Square'){
-        const newSquare = new Square();
+        const newSquare = new Square(shapeColor);
         return newSquare;
     }
 }
