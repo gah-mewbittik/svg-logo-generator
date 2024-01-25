@@ -35,7 +35,7 @@ const questions = [
         type:'list',
         name:'shape',
         message: 'Enter the shape you want your logo to possess: ',
-        options: ['Circle', 'Triangle', 'Square'],
+        choices: ['Circle', 'Triangle', 'Square'],
        
     },
     {
@@ -52,15 +52,27 @@ const questions = [
    
 ];
 
+function svgType(data){
+    if(data.shape === 'Circle'){
+        const newCircle = new Circle();
+        return newCircle;
+    }else if(data.shape === 'Triangle'){
+        const newTriangle = new Triangle();
+        return newTriangle;
+    }else if(data.shape === 'Square'){
+        const newSquare = new Square();
+        return newSquare;
+    }
+}
 
 
 // function to write README file
 function writeToFile(fileName, data) {
         
         //fileName = `${data.title.toLowerCase().split(' ').join('')}.md`;
-        fileName = `logo.svg`;
+        const svgCode = svgType(data);
 
-        fs.writeFile(fileName, genMarkDown(data), (err) => {
+        fs.writeFile(fileName, svgCode, (err) => {
         err ? console.log(err) : console.log('Generated logo.svg')
         });
 }
