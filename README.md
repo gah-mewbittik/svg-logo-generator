@@ -5,10 +5,10 @@
 The purpose of this project is to create a logo in .svg format. The logo is composed of a basic shape, maximum of 3 letters, and the choice of shape and text color. Developing this project demonstrates our object oriented programming with server-side development.
 This project was developed with Inquirer version 8.2.4. Using Inquirer assisted in forming and structuring of our questions and responses. Along Inquirer, Jest version 29.7.0 is used for testing. 
 
-The following is an image of a newly generated README file application.
-![Alt text](./assets/images/generatedREADME_preview.png)
+The following is an image of a newly generated logo.svg file application.
+![Alt text](./assets/images/logoScreenShot.png)
 The Following image are the list of questions the application used to create the readme file.
-![Alt text](./assets/images/README_questions.png)
+![Alt text](./assets/images/logoQustionPic.png)
 
 
 

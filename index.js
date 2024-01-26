@@ -7,7 +7,7 @@ const Circle = require('./lib/circle');
 const Triangle = require('./lib/triangle');
 const Square = require('./lib/square');
 
-// an array of questions for user input
+// an array of questions for user input regarding shapes, text, anc color
 const questions = [
     {
         type:'input',
@@ -24,7 +24,7 @@ const questions = [
         type:'input',
         name:'text-color',
         message: 'Enter the color you want your text to be: ',
-        validate: (input) =>{ //checks if you entered a description
+        validate: (input) =>{ //checks if you entered a color
             if(!input.trim()){
                 return 'Please enter the text color you would like to use.';
             }
@@ -42,7 +42,7 @@ const questions = [
         type:'input',
         name:'shape-color',
         message: 'Enter the color you want your shape to be: ',
-        validate: (input) =>{ //checks if you entered a description
+        validate: (input) =>{ //checks if you entered a color
             if(!input.trim()){
                 return 'Please enter the color you would like to use.';
             }
@@ -52,6 +52,7 @@ const questions = [
    
 ];
 
+// function for 
 function svgType(data){
 
     const shapeColor = data['shape-color'];
@@ -73,12 +74,14 @@ function svgType(data){
 
 
 
-// function to write README file
+// function to write svg file
 function writeToFile(fileName, data) {
         
-        //fileName = `${data.title.toLowerCase().split(' ').join('')}.md`;
+       //assigning svgType to shape 
         const shape = svgType(data);
+        //assigning shape.render to svgCode
         const svgCode = shape.render();
+
         fs.writeFile(fileName, svgCode, (err) => {
         err ? console.log(err) : console.log('Generated logo.svg')
         });
@@ -88,7 +91,7 @@ function writeToFile(fileName, data) {
 function init() {
     inquirer.prompt(questions)
     .then((data) => {
-    
+        //label file logo.svg
         writeToFile('logo.svg', data);
     })
     .catch((error) => {
