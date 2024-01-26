@@ -18,7 +18,7 @@ N/A
 
 ## Usage
 
-To view the application in action, simply click the following link: https://drive.google.com/file/d/1t9bPOVQiuZMAbsmTnVis25f9a2nEpl6s/view?usp=drive_link
+To view the application in action, simply click the following link: https://drive.google.com/file/d/1T7R794Bo4lJ8floktRax4lvJxWKJg6YL/view?usp=drive_link
 The link will redirect you to a video demonstration of the application in action. The SVG-Logo-Generator application functionality generates specific questions to define the shape, the letters, and colors of the user's logo. 
 
 ## Credits
